@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.grafelhaft.polygoncalc.converter.LocationConverterTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-09-22T15:57:33" hostname="RED-DEVIL" time="0.004">
+  <properties/>
+  <testcase name="distance_lat" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.002"/>
+  <testcase name="distance_lng" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.0"/>
+  <testcase name="distance" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.0"/>
+  <testcase name="convertLatLangToMeters_1" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.001"/>
+  <testcase name="convertLatLangToMeters_2" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.0"/>
+  <testcase name="convertLatLangToMeters_3" classname="de.grafelhaft.polygoncalc.converter.LocationConverterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
