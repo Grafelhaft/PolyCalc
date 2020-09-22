@@ -5,7 +5,7 @@ This library:
 - can calculate the distance between two GPS coordinates
 
 
-###How to find the convex hull of a list of points:
+### How to find the convex hull of a list of points:
 
 Right now, there are two different algorithms implemented to find a convex hull
 - [QuickHull](https://en.wikipedia.org/wiki/Quickhull)
@@ -26,7 +26,7 @@ IPoint[] convexHullQuick = ConvexHull.getConvexHull(points, ConvexHull.Algorithm
 IPoint[] convexHullGraham = ConvexHull.getConvexHull(points, ConvexHull.Algorithm.GRAHAM_SCAN);
 ```
 
-###How to calculate the area of a polygon:
+### How to calculate the area of a polygon:
 
 Before calculating the area of a polygon, it makes sense to find its convex hull first. 
 Otherwise you might get strange/wrong results. 
@@ -43,7 +43,7 @@ IPolygon<IPoint> polygon = new Polygon(points);
 double result = polygon.area();
 ```
 
-###How to calculate the distance in meters between two GPS coordinates:
+### How to calculate the distance in meters between two GPS coordinates:
 
 You can provide different earth's radius regarding which model you are using.
 The library provides three GRS80 radii:
@@ -58,7 +58,7 @@ IPoint p2 = new Point(38.780453, -9.498910); // Cabo da roca
 double distanceInMeter = LocationConverter.distance(p1, p2, Contants.EARTH_RADIUS_GRS80);
 ```
 
-###How to calculate the area in meters between GPS coordinates:
+### How to calculate the area in meters between GPS coordinates:
 
 Furthermore you are able to calculate the area of a polygon using GPS coordinates (latitude, longitude):
 
