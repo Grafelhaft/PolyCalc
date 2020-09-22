@@ -1,4 +1,4 @@
-# PolyCalc
+# PolygonCalc
 This library:
 - can find the [convex hull](https://en.wikipedia.org/wiki/Convex_hull) of a list of points
 - can calculate the area of a polygon
