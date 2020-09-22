@@ -10,7 +10,7 @@ import de.grafelhaft.polygoncalc.model.IPolygon;
 import de.grafelhaft.polygoncalc.model.Point;
 import de.grafelhaft.polygoncalc.model.Polygon;
 
-import static de.grafelhaft.polygoncalc.Contants.EARTH_RADIUS_GRS80;
+import static de.grafelhaft.polygoncalc.Constants.EARTH_RADIUS_GRS80;
 
 /**
  * Created by @author Markus Graf (Grafelhaft) on 20.09.2020

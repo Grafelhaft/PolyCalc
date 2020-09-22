@@ -5,7 +5,7 @@ import java.util.List;
 import de.grafelhaft.polygoncalc.model.IPoint;
 import de.grafelhaft.polygoncalc.model.IPolygon;
 
-import static de.grafelhaft.polygoncalc.Contants.EARTH_RADIUS_GRS80;
+import static de.grafelhaft.polygoncalc.Constants.EARTH_RADIUS_GRS80;
 import static de.grafelhaft.polygoncalc.converter.LocationConverter.approxMeterToLatLng;
 import static de.grafelhaft.polygoncalc.converter.LocationConverter.approxMeterToLat;
 import static de.grafelhaft.polygoncalc.converter.LocationConverter.approxMeterToLng;

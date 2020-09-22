@@ -55,7 +55,7 @@ The library provides three GRS80 radii:
 IPoint p1 = new Point(52.516288, 13.377886); // Berlin
 IPoint p2 = new Point(38.780453, -9.498910); // Cabo da roca
 
-double distanceInMeter = LocationConverter.distance(p1, p2, Contants.EARTH_RADIUS_GRS80);
+double distanceInMeter = LocationConverter.distance(p1, p2, Constants.EARTH_RADIUS_GRS80);
 ```
 
 ### How to calculate the area in meters between GPS coordinates:
@@ -67,5 +67,5 @@ IPoint p1 = new Point(48.13726, 11.57558);
 IPoint p2 = new Point(48.16875, 11.55033);
 IPoint p3 = new Point(48.16511, 11.60661);
 
-double areaInSquareMeter = LocationConverter.calcAreaInSquareMeter(new IPoint[] {p1, p2, p3}, Contants.EARTH_RADIUS_GRS80);
+double areaInSquareMeter = LocationConverter.calcAreaInSquareMeter(new IPoint[] {p1, p2, p3}, Constants.EARTH_RADIUS_GRS80);
 ```

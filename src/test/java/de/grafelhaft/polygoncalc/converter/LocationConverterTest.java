@@ -1,6 +1,6 @@
 package de.grafelhaft.polygoncalc.converter;
 
-import de.grafelhaft.polygoncalc.Contants;
+import de.grafelhaft.polygoncalc.Constants;
 import de.grafelhaft.polygoncalc.MathUtils;
 import de.grafelhaft.polygoncalc.model.IPoint;
 import de.grafelhaft.polygoncalc.model.Point;
@@ -14,7 +14,7 @@ public class LocationConverterTest {
     public void convertLatLangToMeters_1() {
         IPoint point = new Point(1, 1);
 
-        IPoint result = LocationConverter.approxLatLngToMeter(point, Contants.EARTH_RADIUS_GRS80);
+        IPoint result = LocationConverter.approxLatLngToMeter(point, Constants.EARTH_RADIUS_GRS80);
         String x = MathUtils.format2Decimals(result.x());
         String y = MathUtils.format2Decimals(result.y());
 
@@ -27,8 +27,8 @@ public class LocationConverterTest {
         IPoint point1 = new Point(1, 0);
         IPoint point2 = new Point(0, 1);
 
-        IPoint result1 = LocationConverter.approxLatLngToMeter(point1, Contants.EARTH_RADIUS_GRS80);
-        IPoint result2 = LocationConverter.approxLatLngToMeter(point2, Contants.EARTH_RADIUS_GRS80);
+        IPoint result1 = LocationConverter.approxLatLngToMeter(point1, Constants.EARTH_RADIUS_GRS80);
+        IPoint result2 = LocationConverter.approxLatLngToMeter(point2, Constants.EARTH_RADIUS_GRS80);
         String x = MathUtils.format2Decimals(result1.x());
         String y = MathUtils.format2Decimals(result2.y());
 
@@ -40,8 +40,8 @@ public class LocationConverterTest {
         IPoint maxLatitude = new Point(0, 90);
         IPoint maxLongitude = new Point(180, 0);
 
-        IPoint result1 = LocationConverter.approxLatLngToMeter(maxLatitude, Contants.EARTH_RADIUS_GRS80);
-        IPoint result2 = LocationConverter.approxLatLngToMeter(maxLongitude, Contants.EARTH_RADIUS_GRS80);
+        IPoint result1 = LocationConverter.approxLatLngToMeter(maxLatitude, Constants.EARTH_RADIUS_GRS80);
+        IPoint result2 = LocationConverter.approxLatLngToMeter(maxLongitude, Constants.EARTH_RADIUS_GRS80);
 
         assertEquals(result1.x(), result2.y() / 2, 0);
     }
@@ -51,7 +51,7 @@ public class LocationConverterTest {
         IPoint p1 = new Point(52.516288, 13.377886); // Berlin
         IPoint p2 = new Point(38.780453, -9.498910); // Cabo da roca
 
-        double distanceInKilometer = LocationConverter.distance(p1, p2, Contants.EARTH_RADIUS_GRS80 / 1000);
+        double distanceInKilometer = LocationConverter.distance(p1, p2, Constants.EARTH_RADIUS_GRS80 / 1000);
         assertEquals(2326, distanceInKilometer, 1);
     }
 
@@ -61,7 +61,7 @@ public class LocationConverterTest {
         IPoint p1 = new Point(1, 0);
 
         double result1 = LocationConverter.approxLatToMeter(1);
-        double result2 = LocationConverter.distance(p0, p1, Contants.EARTH_RADIUS_GRS80);
+        double result2 = LocationConverter.distance(p0, p1, Constants.EARTH_RADIUS_GRS80);
 
         assertEquals(result1, result2, 1);
     }
@@ -71,8 +71,8 @@ public class LocationConverterTest {
         IPoint p0 = new Point(0, 0);
         IPoint p1 = new Point(0, 1);
 
-        double result1 = LocationConverter.approxLngToMeter(0, 1, Contants.EARTH_RADIUS_GRS80);
-        double result2 = LocationConverter.distance(p0, p1, Contants.EARTH_RADIUS_GRS80);
+        double result1 = LocationConverter.approxLngToMeter(0, 1, Constants.EARTH_RADIUS_GRS80);
+        double result2 = LocationConverter.distance(p0, p1, Constants.EARTH_RADIUS_GRS80);
 
         assertEquals(result1, result2, 1);
     }
@@ -83,6 +83,6 @@ public class LocationConverterTest {
         IPoint p2 = new Point(48.16875, 11.55033); // Olympiapark
         IPoint p3 = new Point(48.16511, 11.60661); // Englischer Garten
 
-        double areaInSquareMeter = LocationConverter.calcAreaInSquareMeter(new IPoint[]{p1, p2, p3}, Contants.EARTH_RADIUS_GRS80);
+        double areaInSquareMeter = LocationConverter.calcAreaInSquareMeter(new IPoint[]{p1, p2, p3}, Constants.EARTH_RADIUS_GRS80);
     }
 }
