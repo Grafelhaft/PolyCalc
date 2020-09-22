@@ -77,4 +77,12 @@ public class LocationConverterTest {
         assertEquals(result1, result2, 1);
     }
 
+    @Test
+    public void area() {
+        IPoint p1 = new Point(48.13726, 11.57558); // Marienplatz
+        IPoint p2 = new Point(48.16875, 11.55033); // Olympiapark
+        IPoint p3 = new Point(48.16511, 11.60661); // Englischer Garten
+
+        double areaInSquareMeter = LocationConverter.calcAreaInSquareMeter(new IPoint[]{p1, p2, p3}, Contants.EARTH_RADIUS_GRS80);
+    }
 }
